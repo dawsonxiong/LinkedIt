@@ -4,7 +4,7 @@ import '../index.css'
 
 function Info() {
     return(
-        <div className="bg-[#FEEDE1] w-screen h-screen flex items-center justify-center">
+        <div>
             <div className="border-2 border-red-500 w-[631px] h-[662px] flex items-center justify-center rounded-4xl">
             <div className="bg-white w-[631px] h-[230px] rounded-4xl flex items-center justify-center space-x-4">
                 <div className="bg-white w-[350px] h-[134px] rounded-4xl flex items-center justify-center drop-shadow-2xl">
