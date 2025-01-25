@@ -2,7 +2,7 @@ import React from 'react';
 
 const PhoneForm = () => {
     return (
-        <div class="bg-cover bg-center flex  justify-center mt-6 bg-[url(./assets/Landingpage.png)] w-[316px] h-[675px] ">
+        <div class="bg-cover bg-center flex  justify-center bg-[url(./assets/Landingpage.png)] w-[316px] h-[675px] ">
                 <form class="flex flex-col items-center mt-35 space-y-5">
                     <label>Company Name:</label>
                     <div class="">
