@@ -8,9 +8,9 @@ import Profile from './components/Profile.jsx';
 
 function App() {
   return (
-    <div className="bg-[url(./assets/bg.png)] flex items-center justify-center w-screen h-screen space-x-90">
-      <Profile/>
-    {/* <Info/> */}
+    <div className="bg-[url(./assets/bg.png)] flex items-center justify-center w-screen h-screen space-x-60 pr-38">
+    {/* <Profile/> */}
+    <Info/>
       <div className ="flex -space-x-120">
         <Email/>
         <PhoneForm/>
