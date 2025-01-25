@@ -5,7 +5,7 @@ import Background from './assets/bg.png'
 
 function App() {
   return (
-    <div className="bg-[url(./assets/bg.png)] flex items-center justify-center w-screen h-screen">
+    <div className="bg-cover bg-center flex items-center justify-center w-screen h-screen bg-[url(./assets/bg.png)] space-x-10">
       <Info/>
       <PhoneForm/>
     </div>
