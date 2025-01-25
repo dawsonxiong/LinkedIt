@@ -22,13 +22,13 @@ function App() {
       setSpaceX('space-x-100');
       setrMargin('pr-75');
       setAnimate(false);
-    }, 300); 
+    }, 0); 
   };
 
   return (
-    <div className={`bg-[url('./assets/bg.png')] flex items-center justify-center w-screen h-screen ${spaceX} ${rMargin}`}>
+    <div className={`bg-[url('./assets/bg.png')] flex items-center justify-center w-screen h-screen ${spaceX} ${rMargin} transition-all duration-100 ease-in-out`}>
       {showInfo ? <Info /> : <Profile />}
-      <div className={`flex ${spacing}`}>
+      <div className={`flex ${spacing} transition-all duration-100 ease-in-out`}>
         <Email />
         <PhoneForm onSearch={handleSearchClick} className={animate ? 'slide' : ''} />
       </div>
