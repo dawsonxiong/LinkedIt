@@ -4,10 +4,10 @@ import PhoneForm from './components/phone.jsx';
 
 function App() {
   return (
-    <>
-    <Info/>
-    <PhoneForm/>
-    </>
+    <div className="border-2 flex items-center justify-center">
+      <Info/>
+      <PhoneForm/>
+    </div>
   );
 }
 
