@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="bg-[url(./assets/bg.png)] flex items-center justify-center w-screen h-screen">
       <Profile/>
-    {/* <Info/> */}
+      {/* <Info/> */}
       
       <PhoneForm/>
       <Email/>
