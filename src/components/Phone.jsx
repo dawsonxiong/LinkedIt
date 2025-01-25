@@ -6,12 +6,12 @@ const PhoneForm = () => {
                 <form class="flex flex-col items-center mt-35 space-y-5">
                     <label>Company Name:</label>
                     <div class="">
-                        <input type="text" id="companyName" name="companyName" class="bg-white w-[240px] h-[39px] rounded-[100px]" />
+                        <input type="text" id="companyName" name="companyName" class="bg-white w-[240px] h-[39px] rounded-[100px] font-serif" />
                     </div>
                     
                         <label>Company Position:</label>
                     <div class="">
-                        <input type="text" id="companyPosition" name="companyPosition" class="bg-white w-[240px] h-[39px] rounded-[100px]" />
+                        <input type="text" id="companyPosition" name="companyPosition" class="bg-white w-[240px] h-[39px] rounded-[100px] font-serif" />
                     </div>
                     <button type="submit" class="w-[197px] h-[39px] rounded-[100px] bg-white">Search</button>
                 </form>
