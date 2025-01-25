@@ -1,11 +1,10 @@
 import React from 'react';
 
-const emaillist = () => {
+const Email = () => {
     return (
-        <div>
-      <img src="src/assets/Info page.png" alt="Description of image" />
-    </div>
+        <div class="bg-cover bg-center flex items-center justify-center bg-[url(./assets/Infopage.png)] w-[316px] h-[675px] ">
+                
+        </div>
     );
 };
-
-export default emaillist;
+export default Email;
