@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import Info from './components/info.jsx'
 
 function App() {
-
   return (
     <>
-      <p class="text-9xl">test test</p>
+    <Info/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
