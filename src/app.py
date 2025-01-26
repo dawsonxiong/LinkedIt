@@ -8,6 +8,7 @@ from selenium.webdriver.common.keys import Keys
 from flask import Flask, jsonify
 from flask_cors import CORS
 from flask import request  
+import json
 
 def scroll_to_bottom(driver):
     last_height = driver.execute_script("return document.body.scrollHeight")
@@ -172,11 +173,11 @@ def linkedin_search():
                     )
                 )
                 driver.execute_script("arguments[0].scrollIntoView(true);", next_page_button)
-                time.sleep(2)  # Wait for scroll to complete
+                #time.sleep(1)  # Wait for scroll to complete
                 next_page_button.click()
                 
                 # Wait for new page to load
-                time.sleep(2)  # Allow time for page transition
+                #time.sleep(1)  # Allow time for page transition
                 
                 # Process the new page
                 process_current_page()
@@ -190,6 +191,10 @@ def linkedin_search():
         # Print summary
         print(f"\nProcessed {search_results['metadata']['pages_scraped']} pages")
         print(f"Found {len(search_results['results'])} matching profiles")
+
+        # Save results to a JSON file
+        with open('linkedin_search_results.json', 'w') as file:
+            json.dump(search_results, file, indent=4)
 
         return jsonify(search_results)
 

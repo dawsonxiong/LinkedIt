@@ -13,10 +13,12 @@ function App() {
   const [spaceX, setSpaceX] = useState('space-x-60');
   const [rMargin, setrMargin] = useState('pr-38');
   const [animate, setAnimate] = useState(false);
+  const [searchResults, setSearchResults] = useState(null);
 
-  const handleSearchClick = () => {
+  const handleSearchClick = (results) => {
     setShowInfo(false);
     setAnimate(true);
+    setSearchResults(results);
     setTimeout(() => {
       setSpacing('-space-x-160');
       setSpaceX('space-x-100');
@@ -36,7 +38,7 @@ function App() {
     <div className={`bg-[url('./assets/bg.png')] flex items-center justify-center w-screen h-screen ${spaceX} ${rMargin} transition-all duration-100 ease-in-out`}>
       {showInfo ? <Info /> : <Profile />}
       <div className={`flex ${spacing} transition-all duration-100 ease-in-out`}>
-        <Email onHomeClick={handleHomeClick} />
+        <Email onHomeClick={handleHomeClick} searchResults={searchResults} />
         <PhoneForm onSearch={handleSearchClick} className={animate ? 'slide' : ''} />
       </div>
     </div>

@@ -1,0 +1,31 @@
+{
+    "metadata": {
+        "timestamp": "2025-01-26 02:39:03",
+        "user": "user",
+        "search_criteria": {
+            "job": "engineer",
+            "company": "amazon"
+        },
+        "pages_scraped": 3
+    },
+    "results": [
+        {
+            "name": "Hardik Paliwal",
+            "position": "Software Engineer @ Amazon",
+            "linkedin_url": "https://www.linkedin.com/in/hardik-paliwal",
+            "photo_url": "https://media.licdn.com/dms/image/v2/C4E03AQFydo0R-tQ4uQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1640603650227?e=1743638400&v=beta&t=Ka2yofzcYwuxo8rAu6VqhQ_pKz1V2jlqsIZchjNJBhQ"
+        },
+        {
+            "name": "Zhancheng S.",
+            "position": "Software Engineer at Amazon",
+            "linkedin_url": "https://www.linkedin.com/in/zhancheng-song",
+            "photo_url": "https://media.licdn.com/dms/image/v2/C4E03AQGEIG8tizUKrg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1600194347397?e=1743638400&v=beta&t=HwTaC6t1O6VyTu1FIwLrs_wH9z5TqjLVMPqFOb4Ryx4"
+        },
+        {
+            "name": "Rashmi Patil (Tawar)",
+            "position": "Security Engineer @ Amazon",
+            "linkedin_url": "https://www.linkedin.com/in/patilrashmi",
+            "photo_url": "https://media.licdn.com/dms/image/v2/D5603AQFDSSwvL6Zubg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1682252309253?e=1743638400&v=beta&t=qT2z8DnzEjZjHh2Lpy8Uv7Jao3E4_KiZaKy2r4nne90"
+        }
+    ]
+}
