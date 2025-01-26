@@ -17,7 +17,7 @@ const Email = ({ onHomeClick, searchResults, onProfileSelect }) => {
 
     return (
         <div className="bg-cover bg-center flex items-top justify-center bg-[url(./assets/Infopage.png)] w-[316px] h-[675px] container flex-col">
-            <button className="btn mt-2 ml-5" style={{ marginTop: 'calc(2rem - 70px)', marginLeft: 'calc(1.25rem + 10px)' }} onClick={handleHomeClick}>
+            <button className="btn mt-2 ml-5" style={{ marginTop: 'calc(2rem - 70px)', marginLeft: 'calc(1.25rem + 15px)' }} onClick={handleHomeClick}>
                 <img src="src/assets/Home.png" alt="Home" />
             </button>
             <div className="flex items-top justify-center h-[560px] mt-2 overflow-auto">

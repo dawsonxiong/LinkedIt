@@ -38,7 +38,7 @@ function Info() {
                         <img src={Logo} className="w-[123px] h-[123px]"></img>
                         <p className="text-[50px] font-serif">LinkedIt</p>
                     </div>
-                    <div>
+                    <div style={{ marginLeft: 'calc(1.25rem + 1px)' }} >
                         <p className="text">Making</p>
                         <p className="text">Connections</p>
                         <p className="text">Easier,</p>
