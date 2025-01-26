@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Email = ({ onHomeClick, searchResults }) => {
+const Email = ({ onHomeClick, searchResults, onProfileSelect }) => {
     const [profiles, setProfiles] = useState([]);
 
     useEffect(() => {
@@ -19,16 +19,11 @@ const Email = ({ onHomeClick, searchResults }) => {
                 </button>
                 <div className="profiles-list mt-5">
                     {profiles.map((profile, index) => (
-                        <div key={index} className="profile-item mb-4 p-2 bg-white rounded shadow">
-                            <img src={profile.photo_url} alt={profile.name} className="w-10 h-10 rounded-full" />
+                        <button key={index} className="profile-item mb-4 p-2 bg-white rounded shadow" onClick={() => onProfileSelect(profile)}>
                             <div className="profile-info ml-2">
                                 <h3 className="text-lg font-semibold">{profile.name}</h3>
-                                <p className="text-sm">{profile.position}</p>
-                                <a href={profile.linkedin_url} target="_blank" rel="noopener noreferrer" className="text-blue-500">
-                                    View Profile
-                                </a>
                             </div>
-                        </div>
+                        </button>
                     ))}
                 </div>
             </div>

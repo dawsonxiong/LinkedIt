@@ -14,6 +14,7 @@ function App() {
   const [rMargin, setrMargin] = useState('pr-38');
   const [animate, setAnimate] = useState(false);
   const [searchResults, setSearchResults] = useState(null);
+  const [selectedProfile, setSelectedProfile] = useState(null);
 
   const handleSearchClick = (results) => {
     setShowInfo(false);
@@ -32,13 +33,18 @@ function App() {
     setSpacing('-space-x-120');
     setSpaceX('space-x-60');
     setrMargin('pr-38');
+    setSelectedProfile(null);
+  };
+
+  const handleProfileSelect = (profile) => {
+    setSelectedProfile(profile);
   };
 
   return (
     <div className={`bg-[url('./assets/bg.png')] flex items-center justify-center w-screen h-screen ${spaceX} ${rMargin} transition-all duration-100 ease-in-out`}>
-      {showInfo ? <Info /> : <Profile profiles={searchResults ? searchResults.results : []} />}
+      {showInfo ? <Info /> : <Profile profile={selectedProfile} />}
       <div className={`flex ${spacing} transition-all duration-100 ease-in-out`}>
-        <Email onHomeClick={handleHomeClick} searchResults={searchResults} />
+        <Email onHomeClick={handleHomeClick} searchResults={searchResults} onProfileSelect={handleProfileSelect} />
         <PhoneForm onSearch={handleSearchClick} className={animate ? 'slide' : ''} />
       </div>
     </div>
