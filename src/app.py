@@ -187,9 +187,6 @@ def linkedin_search():
         print(f"\nProcessed {search_results['metadata']['pages_scraped']} pages")
         print(f"Found {len(search_results['results'])} matching profiles")
 
-        # Save results to a JSON file
-        with open('linkedin_search_results.json', 'w') as file:
-            json.dump(search_results, file, indent=4)
 
         return jsonify(search_results)
 
