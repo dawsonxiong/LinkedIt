@@ -40,11 +40,11 @@ function Info() {
                             <div className="title" style={{ background: 'rgba(255, 255, 255, 0.73)' }}>
                                 <p className="text">What is LinkedIt?</p>
                             </div>
-                            <p className=" text px-6">LinkedIt streamlines the processes of finding outreach - whether it be sponsors or finding a hackathon to be a part of</p>
+                            <p className="mt-1 text-center text-[19px] px-6">LinkedIt streamlines the processes of finding outreach - whether it be sponsors or finding a hackathon to be a part of</p>
                         </div>
                         <div className="box h-[50%]" style={{ background: 'rgba(255, 255, 255, 0.54)' }}>
                             <p className="text">Developer Tools</p>
-                            <div className="flex space-x-2 mt-2">
+                            <div className="mt-15 flex space-x-2 mt-2">
                                 {tools.map(tool => (
                                     <div
                                         key={tool.name}
@@ -72,7 +72,7 @@ function Info() {
                             <div className="title" style={{ background: 'rgba(255, 255, 255, 0.73)' }}>
                                 <p className="text">Giving back to everyone</p>
                             </div>
-                            <p className=" text px-6">We allow outreach from anyone: small business to large companies; sponsors to sponsorships</p>
+                            <p className="mt-3 text-center text-[19px] px-6">We allow outreach from anyone: small business to large companies; sponsors to sponsorships</p>
                         </div>
                         <div className="box h-[50%]" style={{ background: 'rgba(255, 255, 255, 0.54)' }}>
                             <p className="text">Developers</p>
