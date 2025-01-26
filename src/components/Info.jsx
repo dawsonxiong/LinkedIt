@@ -52,7 +52,7 @@ function Info() {
                             <div className="title" style={{ background: 'rgba(255, 255, 255, 0.73)' }}>
                                 <p className="text">What is LinkedIt?</p>
                             </div>
-                            <p className="mt-1 text-center text-[19px] px-6">LinkedIt streamlines the processes of finding outreach - whether it be sponsors or finding a hackathon to be a part of</p>
+                            <p className="mt-3 text-center text-[19px] px-6">LinkedIt streamlines the processes of finding outreach</p>
                         </div>
                         <div className="box h-[50%]" style={{ background: 'rgba(255, 255, 255, 0.54)' }}>
                             <p className="text">Developer Tools</p>
