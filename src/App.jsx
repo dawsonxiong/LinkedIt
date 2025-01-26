@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className={`bg-[url('./assets/bg.png')] flex items-center justify-center w-screen h-screen ${spaceX} ${rMargin} transition-all duration-100 ease-in-out`}>
-      {showInfo ? <Info /> : <Profile />}
+      {showInfo ? <Info /> : <Profile profiles={searchResults ? searchResults.results : []} />}
       <div className={`flex ${spacing} transition-all duration-100 ease-in-out`}>
         <Email onHomeClick={handleHomeClick} searchResults={searchResults} />
         <PhoneForm onSearch={handleSearchClick} className={animate ? 'slide' : ''} />
