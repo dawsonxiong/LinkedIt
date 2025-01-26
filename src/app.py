@@ -14,7 +14,6 @@ def scroll_to_bottom(driver):
     last_height = driver.execute_script("return document.body.scrollHeight")
     while True:
         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(2)
         new_height = driver.execute_script("return document.body.scrollHeight")
         if new_height == last_height:
             break 
@@ -173,11 +172,7 @@ def linkedin_search():
                     )
                 )
                 driver.execute_script("arguments[0].scrollIntoView(true);", next_page_button)
-                #time.sleep(1)  # Wait for scroll to complete
                 next_page_button.click()
-                
-                # Wait for new page to load
-                #time.sleep(1)  # Allow time for page transition
                 
                 # Process the new page
                 process_current_page()

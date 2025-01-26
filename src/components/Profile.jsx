@@ -25,27 +25,7 @@ function Profile() {
 
             <div className="w-30 h-15"></div>
 
-            <div className="w-[366px] h-[204px] rounded-4xl bg-white drop-shadow-lg">
-                <div className="p-6 flex flex-col space-y-6">
-                    <div className="flex items-center space-x-4">
-                        <div className="w-[50px] h-[50px] bg-gray-300 rounded-full flex items-center justify-center">   
-                        </div>
-                        <div>
-                            <p className="text-lg font-semibold">{name}</p>
-                            <p className="text-sm text-gray-600">{position}</p>
-                        </div>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                        <p className="text-sm text-gray-500">{email}</p>
-                        <button 
-                            className="text-sm text-white bg-[#FF9C67] hover:bg-[#FF7125] rounded-full px-3 py-1 transition duration-300" 
-                            onClick={() => copyToClipboard(email)}
-                        >
-                            Copy
-                        </button>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     )
 }
