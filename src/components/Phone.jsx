@@ -1,18 +1,35 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const PhoneForm = ({ onSearch }) => {
   const [companyName, setCompanyName] = useState('');
   const [companyPosition, setCompanyPosition] = useState('');
   const [error, setError] = useState('');
 
-  const handleSearch = (e) => {
+  const handleSearch = async (e) => {
     e.preventDefault();
     if (companyName.trim() === '' || companyPosition.trim() === '') {
       setError('Both fields are required.');
       return;
     }
     setError('');
-    onSearch();
+    
+    const data = {
+      job: companyPosition,
+      company: companyName
+    };
+
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/api/linkedin-search', data, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      onSearch(response.data);
+    } catch (error) {
+      setError('Error submitting data');
+      console.error('There was an error!', error);
+    }
   };
 
   return (
@@ -44,7 +61,7 @@ const PhoneForm = ({ onSearch }) => {
           Search
         </button>
         {error && (
-          <div className="font-serif bg-red-500 text-white p-4 rounded-[100px] mt-2">
+          <div className="font-serif bg-red-500 text-white p-2 rounded-[100px] mt-2">
             {error}
           </div>
         )}

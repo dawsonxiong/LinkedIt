@@ -36,7 +36,7 @@ def linkedin_search():
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
     chrome_options.add_experimental_option('useAutomationExtension', False)
-    chrome_options.add_argument('--headless=new')  # Run in background
+    #chrome_options.add_argument('--headless=new')  # Run in background
 
     driver = webdriver.Chrome(options=chrome_options)
     wait = WebDriverWait(driver, 10)
