@@ -24,12 +24,22 @@ function App() {
       setAnimate(false);
     }, 0); 
   };
+  const handleHomeClick = () => {
+    setShowInfo(true);
+    setAnimate(false);
+    setTimeout(() => {
+      setSpacing('-space-x-120');
+      setSpaceX('space-x-60');
+      setrMargin('pr-75');
+      setAnimate(false);
+    }, 0); 
+  };
 
   return (
     <div className={`bg-[url('./assets/bg.png')] flex items-center justify-center w-screen h-screen ${spaceX} ${rMargin} transition-all duration-100 ease-in-out`}>
       {showInfo ? <Info /> : <Profile />}
       <div className={`flex ${spacing} transition-all duration-100 ease-in-out`}>
-        <Email />
+        <Email onSearch = {handleHomeClick} className={animate ? 'slide' : ''}  />
         <PhoneForm onSearch={handleSearchClick} className={animate ? 'slide' : ''} />
       </div>
     </div>
