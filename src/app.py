@@ -47,11 +47,11 @@ def linkedin_search():
     try:
         # Wait for and find username field
         username = wait.until(EC.presence_of_element_located((By.ID, "username")))
-        username.send_keys("dawsonxiong@gmail.com")
+        username.send_keys("lilyapples696@gmail.com")
         
         # Find and fill password
         password = driver.find_element(By.ID, 'password')
-        password.send_keys('Dawson702!!!')
+        password.send_keys('??????')
         
         # Find and click submit button
         sign_in_button = driver.find_element(By.XPATH, '//* [@type="submit"]')
