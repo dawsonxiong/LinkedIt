@@ -41,9 +41,9 @@ function Info() {
                     <div>
                         <p className="text">Making</p>
                         <p className="text">Connections</p>
-                        <p className="text">Easier</p>
+                        <p className="text">Easier,</p>
                         <br />
-                        <p className="text">One link at a time</p>
+                        <p className="text font-bold">One link at a time!</p>
                     </div>
                 </div>
                 <div className="bottom-container w-[631px] h-[460px] flex">
@@ -52,11 +52,11 @@ function Info() {
                             <div className="title" style={{ background: 'rgba(255, 255, 255, 0.73)' }}>
                                 <p className="text">What is LinkedIt?</p>
                             </div>
-                            <p className="mt-1 text-center text-[19px] px-6">LinkedIt streamlines the processes of finding outreach - whether it be sponsors or finding a hackathon to be a part of</p>
+                            <p className="mt-3 text-center text-[18px] px-6">LinkedIt streamlines the process of outreach, whether it be finding sponsors - or someone TO sponsor! </p>
                         </div>
                         <div className="box h-[50%]" style={{ background: 'rgba(255, 255, 255, 0.54)' }}>
                             <p className="text">Developer Tools</p>
-                            <div className="mt-15 flex space-x-2 mt-2">
+                            <div className="mt-9.5 flex space-x-2 mt-2">
                                 {tools.map(tool => (
                                     <div
                                         key={tool.name}
@@ -84,11 +84,11 @@ function Info() {
                             <div className="title" style={{ background: 'rgba(255, 255, 255, 0.73)' }}>
                                 <p className="text">Giving back to everyone</p>
                             </div>
-                            <p className="mt-3 text-center text-[19px] px-6">We allow outreach from anyone: small business to large companies; sponsors to sponsorships</p>
+                            <p className="mt-3 text-center text-[18px] px-6">We welcome outreach from anyone: small businesses to large companies; sponsors to sponsorships</p>
                         </div>
                         <div className="box h-[50%]" style={{ background: 'rgba(255, 255, 255, 0.54)' }}>
                             <p className="text">Developers</p>
-                            <div className="mt-15 flex space-x-2 mt-2">
+                            <div className="mt-9.5 flex space-x-2 mt-2">
                                 {developers.map(developer => (
                                     <div
                                         key={developer.name}

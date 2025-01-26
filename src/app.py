@@ -22,7 +22,7 @@ def scroll_to_bottom(driver):
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/api/linkedin-search', methods=['POST'])
+@app.route('/api/LinkedIt-search', methods=['POST'])
 def linkedin_search():
 
     data = request.get_json()
@@ -36,7 +36,7 @@ def linkedin_search():
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
     chrome_options.add_experimental_option('useAutomationExtension', False)
-    chrome_options.add_argument('--headless=new')  # Run in background
+    #chrome_options.add_argument('--headless=new')  # Run in background
 
     driver = webdriver.Chrome(options=chrome_options)
     wait = WebDriverWait(driver, 10)
@@ -47,7 +47,7 @@ def linkedin_search():
     try:
         # Wait for and find username field
         username = wait.until(EC.presence_of_element_located((By.ID, "username")))
-        username.send_keys("fairglenproject@gmail.com")
+        username.send_keys("lilyapples696@gmail.com")
         
         # Find and fill password
         password = driver.find_element(By.ID, 'password')

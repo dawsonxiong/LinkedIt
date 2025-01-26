@@ -3,7 +3,7 @@ import json
 
 def test_linkedin_search_api():
     # API endpoint
-    url = 'http://localhost:5000/api/linkedin-search'
+    url = 'http://localhost:5000/api/LinkedIt-search'
     
     # Test data
     test_data = {
