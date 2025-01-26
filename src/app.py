@@ -35,11 +35,11 @@ driver.get('https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-ba
 try:
     # Wait for and find username field
     username = wait.until(EC.presence_of_element_located((By.ID, "username")))
-    username.send_keys("lilyapples696@gmail.com")
+    username.send_keys("dawsonxiong@gmail.com")
     
     # Find and fill password
     password = driver.find_element(By.ID, 'password')
-    password.send_keys('??????')
+    password.send_keys('Dawson702!!!')
     
     # Find and click submit button
     sign_in_button = driver.find_element(By.XPATH, '//* [@type="submit"]')
@@ -51,9 +51,9 @@ try:
     )
     
     # Get search query and perform search
-    job = input('What job?')
-    company = input('What company?')
-    search_query = "" + job + "" + company
+    job = input('What job? ')
+    company = input('What company? ')
+    search_query = "" + job + " " + company
     search_field.send_keys(search_query)
     search_field.send_keys(Keys.RETURN)
     
@@ -64,9 +64,7 @@ try:
         )
     )
     people_filter.click()
-    
-    time.sleep(5)
-        
+            
     # Find all profile links
     profiles = wait.until(
         EC.presence_of_all_elements_located(
@@ -91,19 +89,9 @@ try:
         clean_url = url.split('?')[0]
         if clean_url not in clean_profile_URLs:
             clean_profile_URLs.append(clean_url)
-
-
-    profile_containers = driver.find_elements(By.CLASS_NAME, "reusable-search__result-container")
-    current_positions = []
-
-    for container in profile_containers:
-        try:
-            subtitle = container.find_element(By.CSS_SELECTOR, ".entity-result__primary-subtitle").text
-            current_positions.append(subtitle)
-            print(subtitle)  # This will print each position as it's found
-        except:
-            current_positions.append("No position found")
     
+    
+
     # Print results
     print(f"Found {len(clean_profile_URLs)} profiles:")
     for url in clean_profile_URLs:
