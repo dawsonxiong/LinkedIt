@@ -1,5 +1,5 @@
-import Info from './components/info.jsx'
-import PhoneForm from './components/phone.jsx';
+import Info from './components/Info.jsx'
+import PhoneForm from './components/Phone.jsx';
 import Background from './assets/bg.png'
 import Email from './components/EmailList.jsx';
 import Profile from './components/Profile.jsx';
