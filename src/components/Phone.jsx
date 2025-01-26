@@ -5,6 +5,7 @@ const PhoneForm = ({ onSearch }) => {
   const [companyName, setCompanyName] = useState('');
   const [companyPosition, setCompanyPosition] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false); // Add loading state
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -13,7 +14,8 @@ const PhoneForm = ({ onSearch }) => {
       return;
     }
     setError('');
-    
+    setLoading(true); // Set loading to true when search starts
+
     const data = {
       job: companyPosition,
       company: companyName
@@ -29,6 +31,8 @@ const PhoneForm = ({ onSearch }) => {
     } catch (error) {
       setError('Error submitting data');
       console.error('There was an error!', error);
+    } finally {
+      setLoading(false); // Set loading to false when search ends
     }
   };
 
@@ -41,7 +45,7 @@ const PhoneForm = ({ onSearch }) => {
             type="text"
             id="companyName"
             name="companyName"
-            className="bg-white w-[240px] h-[39px] rounded-[100px] font-serif pl-2 text-center"
+            className="bg-white w-[240px] h-[39px] rounded-[100px] font-serif pl-2 text-center text-[17px]"
             value={companyName}
             onChange={(e) => setCompanyName(e.target.value)}
           />
@@ -52,7 +56,7 @@ const PhoneForm = ({ onSearch }) => {
             type="text"
             id="companyPosition"
             name="companyPosition"
-            className="bg-white w-[240px] h-[39px] rounded-[100px] font-serif pl-2 text-center"
+            className="bg-white w-[240px] h-[39px] rounded-[100px] font-serif pl-2 text-center text-[17px]"
             value={companyPosition}
             onChange={(e) => setCompanyPosition(e.target.value)}
           />
@@ -60,6 +64,11 @@ const PhoneForm = ({ onSearch }) => {
         <button type="submit" className="font-serif text-[22px] font-bold w-[197px] h-[55px] rounded-[100px] bg-white hover:bg-gray-200 transition duration-300 mt-6 border border-black-400">
           Search
         </button>
+        {loading && (
+          <div className="mt-4">
+            <img src="src/assets/loading.gif" alt="Loading" className="w-20 h-20" />
+          </div>
+        )}
         {error && (
           <div className="font-serif bg-red-500 text-white p-2 rounded-[100px] mt-2">
             {error}

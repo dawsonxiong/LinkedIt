@@ -36,7 +36,7 @@ def linkedin_search():
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
     chrome_options.add_experimental_option('useAutomationExtension', False)
-    #chrome_options.add_argument('--headless=new')  # Run in background
+    chrome_options.add_argument('--headless=new')  # Run in background
 
     driver = webdriver.Chrome(options=chrome_options)
     wait = WebDriverWait(driver, 10)
@@ -47,11 +47,11 @@ def linkedin_search():
     try:
         # Wait for and find username field
         username = wait.until(EC.presence_of_element_located((By.ID, "username")))
-        username.send_keys("lilyapples696@gmail.com")
+        username.send_keys("dawsonxiong@gmail.com")
         
         # Find and fill password
         password = driver.find_element(By.ID, 'password')
-        password.send_keys('??????')
+        password.send_keys('Dawson702!!!')
         
         # Find and click submit button
         sign_in_button = driver.find_element(By.XPATH, '//* [@type="submit"]')
