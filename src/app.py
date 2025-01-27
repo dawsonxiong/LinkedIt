@@ -10,6 +10,7 @@ from flask_cors import CORS
 from flask import request  
 import json
 
+# Scroll to bottom of page
 def scroll_to_bottom(driver):
     last_height = driver.execute_script("return document.body.scrollHeight")
     while True:
@@ -19,19 +20,23 @@ def scroll_to_bottom(driver):
             break 
         last_height = new_height
 
+# Flask app setup
 app = Flask(__name__)
 CORS(app)
 
 @app.route('/api/LinkedIt-search', methods=['POST'])
+#  Main function
 def linkedin_search():
 
+    # Obtain data
     data = request.get_json()
-    print("Received data:", data)  # Debug print
 
+    # Parse data and make it ready for query
     job = data['job']
     company = data['company']
     search_query = "\"" + job + "\" " + company
 
+    # Chrome tab options
     chrome_options = Options()
     chrome_options.add_argument('--disable-blink-features=AutomationControlled')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
@@ -45,15 +50,15 @@ def linkedin_search():
     driver.get('https://www.linkedin.com/login')
 
     try:
-        # Wait for and find username field
+        # Fill in username field
         username = wait.until(EC.presence_of_element_located((By.ID, "username")))
-        username.send_keys("lilyapples696@gmail.com")
+        username.send_keys("username")
         
-        # Find and fill password
+        # Fill in password field
         password = driver.find_element(By.ID, 'password')
-        password.send_keys('??????')
+        password.send_keys('passwor')
         
-        # Find and click submit button
+        # Click submit button
         sign_in_button = driver.find_element(By.XPATH, '//* [@type="submit"]')
         sign_in_button.click()
 
@@ -62,7 +67,7 @@ def linkedin_search():
             EC.presence_of_element_located((By.XPATH, '//*[@id="global-nav-typeahead"]/input'))
         )
 
-        # Search for job title
+        # Search for job title and company
         search_field.send_keys(search_query)
         search_field.send_keys(Keys.RETURN)
 
@@ -77,7 +82,7 @@ def linkedin_search():
         # Create a dictionary with metadata and results
         search_results = {
             "metadata": {
-                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),  # Current UTC time
+                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),  # Current time
                 "user": "user",
                 "search_criteria": {
                     "job": job,
@@ -100,17 +105,16 @@ def linkedin_search():
             
             for item in profile_items:
                 try:
-                    # Get role first to check if it matches our criteria
+                    # Get role
                     try:
                         role_element = item.find_element(
                             By.CSS_SELECTOR,
                             "div[class*='t-14 t-black t-normal']"
                         )
                         role = role_element.text.strip()
-                        
+                        # Checking if role fits search criteria
                         if job.lower() not in role.lower() or company.lower() not in role.lower():
                             continue
-                        
                     except:
                         continue
                     
@@ -187,7 +191,7 @@ def linkedin_search():
         print(f"\nProcessed {search_results['metadata']['pages_scraped']} pages")
         print(f"Found {len(search_results['results'])} matching profiles")
 
-
+        # Return JSON
         return jsonify(search_results)
 
     except Exception as e:
