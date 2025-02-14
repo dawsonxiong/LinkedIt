@@ -2,6 +2,8 @@
 
 ## 🎉 Winner of Geesehacks 2024 Best Beginner Hack! 🎉
 
+![alt text](https://github.com/kevinli5371/LinkedIt/blob/main/src/assets/homepage.png)
+
 ## 💡 Inspiration
 After experiencing the toils that sponsorship teams must go through to find and contact sponsors, we wanted to find a way to make this process more efficient. This process includes searching LinkedIn company pages and filtering for positions, then scrolling through multiple profiles in pursuit of a personal email to contact. While firsthand experience with searching sponsors was our main identified problem, we realized this search for connections was generally arduous for most individuals. Thus, to streamline this LinkedIn problem, we created LinkedIt.
 
