@@ -29,3 +29,5 @@ We also found out early on about the difficulties that came with implementing th
 - Challenging ourselves to implement an **automated email system**
 - Creating and maintaining a secure database to store emails and LinkedIn profiles
 - Ensuring constant engagement by rewarding active connectors/sponsors
+
+### Demo: https://www.youtube.com/watch?v=2oPLkAotjng
