@@ -1,6 +1,6 @@
 # LinkedIt:  Making Connections Easier - one link at a time 
 
-## 🎉 Winner of Geesehacks 2024 Best Beginner Hack! 🎉
+## 🎉 Winner of Geesehacks 2025 Best Beginner Hack! 🎉
 
 ![alt text](https://github.com/kevinli5371/LinkedIt/blob/main/src/assets/homepage.png)
 
